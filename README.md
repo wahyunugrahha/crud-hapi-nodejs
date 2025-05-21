@@ -22,7 +22,6 @@ Proyek ini terdiri dari dua direktori utama:
 **Langkah-langkah:**
 
 ```bash
-cd notes-app-backend-1
 npm install
 ```
 
@@ -31,7 +30,6 @@ npm install
 **Langkah-langkah:**
 
 ```bash
-cd notes-app-frontend-1
 npm install
 ```
 
@@ -42,7 +40,6 @@ npm install
 **Langkah-langkah:**
 
 ```bash
-cd notes-app-backend-1
 npm run start
 ```
 
@@ -53,7 +50,6 @@ Server backend akan berjalan di `http://localhost:5000` (atau sesuai port yang d
 **Langkah-langkah:**
 
 ```bash
-cd notes-app-frontend-1
 npm run build
 npm run start
 ```
@@ -66,14 +62,13 @@ Aplikasi frontend akan berjalan sesuai konfigurasi yang tersedia (misalnya di `h
 
 * `npm install`: Instalasi dependensi backend.
 * `npm run start`: Menjalankan server backend.
-* `npm run dev` *(opsional)*: Mode pengembangan dengan auto-reload.
+
 
 ### Frontend (`notes-app-frontend-1/`):
 
 * `npm install`: Instalasi dependensi frontend.
 * `npm run build`: Build proyek frontend untuk produksi.
 * `npm run start`: Menjalankan frontend (jika tersedia konfigurasi server).
-* `npm run dev` *(opsional)*: Mode pengembangan dengan *hot reload*.
 
 ---
 
