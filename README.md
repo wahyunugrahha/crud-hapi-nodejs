@@ -21,7 +21,7 @@ Pastikan Anda menjalankan perintah di direktori yang sesuai.
 
 a. **Masuk ke direktori backend**:
 `bash
-       cd nama-direktori-backend
+       cd notes-app-backend-1
        `
 b. **Instal Dependensi Backend**:
 `bash
@@ -33,7 +33,7 @@ b. **Instal Dependensi Backend**:
 a. **Masuk ke direktori frontend**:
 (Dari direktori root proyek)
 `bash
-       cd nama-direktori-frontend
+       cd notes-app-frontend-1
        `
 b. **Instal Dependensi Frontend**:
 `bash
@@ -47,7 +47,7 @@ b. **Instal Dependensi Frontend**:
 a. **Pastikan Anda berada di direktori backend**:
 `bash
        # Jika belum, navigasi ke:
-       # cd path/ke/nama-direktori-backend
+       # cd path/ke/notes-app-backend-1
        `
 b. **Jalankan Server Backend**:
 `bash
@@ -60,7 +60,7 @@ Server backend akan berjalan (misalnya di `http://localhost:PORT_BACKEND`).
 a. **Pastikan Anda berada di direktori frontend**:
 `bash
        # Jika belum, navigasi ke:
-       # cd path/ke/nama-direktori-frontend
+       # cd path/ke/notes-app-frontend-1
        `
 b. **Build Proyek Frontend**:
 `bash
@@ -77,13 +77,13 @@ Aplikasi frontend akan berjalan (misalnya di `http://localhost:PORT_FRONTEND`).
 
 Setiap direktori (frontend dan backend) akan memiliki file `package.json` sendiri dengan skrip berikut (atau serupa):
 
-### Untuk Backend (`nama-direktori-backend/`):
+### Untuk Backend (`notes-app-backend-1/`):
 
 - `npm install`: Instal dependensi backend.
 - `npm run start`: Jalankan server backend.
 - `(Opsional) npm run dev`: Jalankan server backend dalam mode pengembangan.
 
-### Untuk Frontend (`nama-direktori-frontend/`):
+### Untuk Frontend (`notes-app-frontend-1/`):
 
 - `npm install`: Instal dependensi frontend.
 - `npm run build`: Build proyek frontend untuk produksi.
