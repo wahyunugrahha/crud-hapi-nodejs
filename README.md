@@ -1,96 +1,105 @@
-# Project Front-End Notes App Back-End Fundamentals
+# 📒 Notes App - Back-End Fundamentals
 
-Aplikasi catatan sederhana dengan front-end dan back-end yang terpisah, dibangun menggunakan Node.js dan npm.
+A simple note-taking application built with a **separated front-end and back-end architecture** using **Node.js** and **npm**.
 
-## Struktur Proyek
+## 📁 Project Structure
 
-Proyek ini terdiri dari dua direktori utama:
+This project contains two main directories:
 
-- `nama-direktori-frontend/`: Berisi kode untuk antarmuka pengguna (front-end).
-- `nama-direktori-backend/`: Berisi kode untuk logika sisi server (back-end).
+```
+notes-app/
+📄 notes-app-frontend/   # Front-End (User Interface)
+📄 notes-app-backend/    # Back-End (Server Logic)
+```
 
-Pastikan Anda menjalankan perintah di direktori yang sesuai.
-
-## Prasyarat
-
-- **Node.js**: Versi 16.x atau yang lebih baru (termasuk npm).
-
-## Instalasi
-
-### 1. Instalasi Backend
-
-a. **Masuk ke direktori backend**:
-`bash
-       cd notes-app-backend-1
-       `
-b. **Instal Dependensi Backend**:
-`bash
-       npm install
-       `
-
-### 2. Instalasi Frontend
-
-a. **Masuk ke direktori frontend**:
-(Dari direktori root proyek)
-`bash
-       cd notes-app-frontend-1
-       `
-b. **Instal Dependensi Frontend**:
-`bash
-       npm install
-       `
-
-## Menjalankan Proyek
-
-### 1. Menjalankan Backend
-
-a. **Pastikan Anda berada di direktori backend**:
-`bash
-       # Jika belum, navigasi ke:
-       # cd path/ke/notes-app-backend-1
-       `
-b. **Jalankan Server Backend**:
-`bash
-       npm run start
-       `
-Server backend akan berjalan (misalnya di `http://localhost:PORT_BACKEND`).
-
-### 2. Menjalankan Frontend (Produksi)
-
-a. **Pastikan Anda berada di direktori frontend**:
-`bash
-       # Jika belum, navigasi ke:
-       # cd path/ke/notes-app-frontend-1
-       `
-b. **Build Proyek Frontend**:
-`bash
-       npm run build
-       `
-c. **Jalankan Server Frontend (atau layani file hasil build)**:
-Perintah ini mungkin berbeda tergantung bagaimana frontend Anda di-deploy setelah build. Bisa jadi `npm run start` jika ada server produksi untuk frontend, atau Anda mungkin perlu melayani direktori `build`/`dist` secara manual.
-`bash
-       npm run start
-       `
-Aplikasi frontend akan berjalan (misalnya di `http://localhost:PORT_FRONTEND`).
-
-## Skrip Utama NPM (Per Direktori)
-
-Setiap direktori (frontend dan backend) akan memiliki file `package.json` sendiri dengan skrip berikut (atau serupa):
-
-### Untuk Backend (`notes-app-backend-1/`):
-
-- `npm install`: Instal dependensi backend.
-- `npm run start`: Jalankan server backend.
-- `(Opsional) npm run dev`: Jalankan server backend dalam mode pengembangan.
-
-### Untuk Frontend (`notes-app-frontend-1/`):
-
-- `npm install`: Instal dependensi frontend.
-- `npm run build`: Build proyek frontend untuk produksi.
-- `npm run start`: Jalankan server produksi frontend (jika ada).
-- `(Opsional) npm run dev`: Jalankan frontend dalam mode pengembangan.
+> Make sure you execute the commands inside the correct directory.
 
 ---
 
-_Ganti `<URL_REPOSITORI_ANDA>`, `nama-direktori-frontend`, `nama-direktori-backend`, `PORT_FRONTEND`, dan `PORT_BACKEND` sesuai dengan proyek Anda._
-_Pastikan untuk menyesuaikan perintah `npm run start` untuk frontend jika cara menjalankannya setelah build berbeda._
+## ✅ Prerequisites
+
+* [Node.js](https://nodejs.org/) v16.x or later (npm included)
+
+---
+
+## 🔧 Installation
+
+### 1. Back-End Setup
+
+```bash
+cd notes-app-backend
+npm install
+```
+
+### 2. Front-End Setup
+
+```bash
+cd ../notes-app-frontend
+npm install
+```
+
+---
+
+## 🚀 Running the Project
+
+### 1. Start Back-End Server
+
+```bash
+cd notes-app-backend
+npm run start
+```
+
+The back-end server will run at: `http://localhost:5000`
+
+### 2. Build & Run Front-End (Production)
+
+```bash
+cd ../notes-app-frontend
+npm run build
+```
+
+To serve the front-end build folder, you can use [`serve`](https://www.npmjs.com/package/serve):
+
+```bash
+npm install -g serve
+serve -s build
+```
+
+The front-end will be available at: `http://localhost:3000` (or the port used by `serve`)
+
+---
+
+## 📆 Available NPM Scripts
+
+### In `notes-app-backend/`:
+
+| Command         | Description                                            |
+| --------------- | ------------------------------------------------------ |
+| `npm install`   | Install dependencies                                   |
+| `npm run start` | Start the back-end server                              |
+| `npm run dev`   | *(optional)* Start in dev mode (e.g., using `nodemon`) |
+
+### In `notes-app-frontend/`:
+
+| Command         | Description                                                 |
+| --------------- | ----------------------------------------------------------- |
+| `npm install`   | Install dependencies                                        |
+| `npm run build` | Build the app for production                                |
+| `npm run start` | Start production server (if configured)                     |
+| `npm run dev`   | *(optional)* Start front-end in dev mode (e.g., Vite/React) |
+
+---
+
+## 🔗 Customization
+
+* Change ports or URLs based on your local environment or deployment server.
+* Update the API endpoint inside the front-end if the back-end is hosted separately (e.g., using a domain or different port).
+* You can also use environment variables or `.env` files to manage configuration more cleanly.
+
+---
+
+## 📬 License
+
+This project is for learning purposes. Feel free to fork and modify.
+
+---
