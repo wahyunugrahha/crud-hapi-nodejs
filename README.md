@@ -1,105 +1,82 @@
-# 📒 Notes App - Back-End Fundamentals
+# Aplikasi Notes App - Back-End dan Front-End
 
-A simple note-taking application built with a **separated front-end and back-end architecture** using **Node.js** and **npm**.
+Aplikasi catatan sederhana dengan arsitektur *frontend* dan *backend* yang terpisah. Dibangun menggunakan Node.js dan npm.
 
-## 📁 Project Structure
+## Struktur Proyek
 
-This project contains two main directories:
+Proyek ini terdiri dari dua direktori utama:
 
-```
-notes-app/
-📄 notes-app-frontend/   # Front-End (User Interface)
-📄 notes-app-backend/    # Back-End (Server Logic)
-```
+* `notes-app-frontend-1/`: Berisi kode antarmuka pengguna (*front-end*).
+* `notes-app-backend-1/`: Berisi kode logika server (*back-end*).
 
-> Make sure you execute the commands inside the correct directory.
+> Pastikan Anda menjalankan perintah di direktori yang sesuai.
 
----
+## Prasyarat
 
-## ✅ Prerequisites
+* **Node.js**: Versi 16.x atau yang lebih baru (sudah termasuk npm).
 
-* [Node.js](https://nodejs.org/) v16.x or later (npm included)
+## Instalasi
 
----
+### 1. Instalasi Backend
 
-## 🔧 Installation
-
-### 1. Back-End Setup
+**Langkah-langkah:**
 
 ```bash
-cd notes-app-backend
+cd notes-app-backend-1
 npm install
 ```
 
-### 2. Front-End Setup
+### 2. Instalasi Frontend
+
+**Langkah-langkah:**
 
 ```bash
-cd ../notes-app-frontend
+cd notes-app-frontend-1
 npm install
 ```
 
----
+## Menjalankan Proyek
 
-## 🚀 Running the Project
+### 1. Menjalankan Backend
 
-### 1. Start Back-End Server
+**Langkah-langkah:**
 
 ```bash
-cd notes-app-backend
+cd notes-app-backend-1
 npm run start
 ```
 
-The back-end server will run at: `http://localhost:5000`
+Server backend akan berjalan di `http://localhost:5000` (atau sesuai port yang ditentukan).
 
-### 2. Build & Run Front-End (Production)
+### 2. Menjalankan Frontend (Produksi)
+
+**Langkah-langkah:**
 
 ```bash
-cd ../notes-app-frontend
+cd notes-app-frontend-1
 npm run build
+npm run start
 ```
 
-To serve the front-end build folder, you can use [`serve`](https://www.npmjs.com/package/serve):
+Aplikasi frontend akan berjalan sesuai konfigurasi yang tersedia (misalnya di `http://localhost:3000`).
 
-```bash
-npm install -g serve
-serve -s build
-```
+## Skrip NPM Penting
 
-The front-end will be available at: `http://localhost:3000` (or the port used by `serve`)
+### Backend (`notes-app-backend-1/`):
 
----
+* `npm install`: Instalasi dependensi backend.
+* `npm run start`: Menjalankan server backend.
+* `npm run dev` *(opsional)*: Mode pengembangan dengan auto-reload.
 
-## 📆 Available NPM Scripts
+### Frontend (`notes-app-frontend-1/`):
 
-### In `notes-app-backend/`:
-
-| Command         | Description                                            |
-| --------------- | ------------------------------------------------------ |
-| `npm install`   | Install dependencies                                   |
-| `npm run start` | Start the back-end server                              |
-| `npm run dev`   | *(optional)* Start in dev mode (e.g., using `nodemon`) |
-
-### In `notes-app-frontend/`:
-
-| Command         | Description                                                 |
-| --------------- | ----------------------------------------------------------- |
-| `npm install`   | Install dependencies                                        |
-| `npm run build` | Build the app for production                                |
-| `npm run start` | Start production server (if configured)                     |
-| `npm run dev`   | *(optional)* Start front-end in dev mode (e.g., Vite/React) |
+* `npm install`: Instalasi dependensi frontend.
+* `npm run build`: Build proyek frontend untuk produksi.
+* `npm run start`: Menjalankan frontend (jika tersedia konfigurasi server).
+* `npm run dev` *(opsional)*: Mode pengembangan dengan *hot reload*.
 
 ---
 
-## 🔗 Customization
+> Ganti nama direktori dan port jika Anda menggunakan konfigurasi yang berbeda.
 
-* Change ports or URLs based on your local environment or deployment server.
-* Update the API endpoint inside the front-end if the back-end is hosted separately (e.g., using a domain or different port).
-* You can also use environment variables or `.env` files to manage configuration more cleanly.
-
----
-
-## 📬 License
-
-This project is for learning purposes. Feel free to fork and modify.
-
----
+Selamat membangun aplikasi catatan Anda! ✨
