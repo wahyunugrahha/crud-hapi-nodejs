@@ -75,3 +75,4 @@ Aplikasi frontend akan berjalan sesuai konfigurasi yang tersedia (misalnya di `h
 > Ganti nama direktori dan port jika Anda menggunakan konfigurasi yang berbeda.
 
 Dah itu ae, moga lancar yak :D
+============================
