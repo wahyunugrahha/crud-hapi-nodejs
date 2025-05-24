@@ -21,9 +21,9 @@ const addNoteHandler = (request, h) => {
   if (isSuccess) {
     const response = h.response({
       status: 'success',
-      response: 'Catatan berhasil ditambahkan',
+      message: 'Catatan berhasil ditambahkan',
       data: {
-        noteID: id,
+        noteId: id,
       },
     });
     response.code(201);
@@ -50,7 +50,7 @@ const getNotesByIdHandler = (request, h) => {
 
   if (note !== undefined) {
     return {
-      status: 'succes',
+      status: 'success',
       data: {
         note,
       },
@@ -81,10 +81,10 @@ const editNotesByHandler = (request, h) => {
       updatedAt,
     };
     const response = h.response({
-      status: 'succes',
+      status: 'success',
       message: 'Catatan berhasil diperbarui',
     });
-    response.code(201);
+    response.code(200);
     return response;
   }
   const response = h.response({
@@ -102,8 +102,8 @@ const deleteNotesByIdHandler = (request, h) => {
   if (index !== -1) {
     notes.splice(index, 1);
     const response = h.response({
-      status: 'succes',
-      succes: 'Berhasil menghapus catatan',
+      status: 'success',
+      message: 'Berhasil menghapus catatan',
     });
     response.code(200);
     return response;
